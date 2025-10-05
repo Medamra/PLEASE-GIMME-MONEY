@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Me</title>
+  <style>
+    body {
+      background-color: #111;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    #message {
+      background-color: #222;
+      padding: 40px 60px;
+      border-radius: 10px;
+      box-shadow: 0 0 20px #000;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    #message:hover {
+      background-color: #333;
+    }
+  </style>
+</head>
+<body>
+  <div id="message">Hey man I made this script</div>
+
+  <script>
+    const message = document.getElementById("message");
+    let clickCount = 0;
+
+    message.addEventListener("click", () => {
+      clickCount++;
+
+      if (clickCount === 1) {
+        message.textContent = "So can u gimme money";
+      } else if (clickCount === 2) {
+        window.location.href = "https://paypal.me/MohammedAmrani321"; // Change this to your target URL
+      }
+    });
+  </script>
+</body>
+</html>
